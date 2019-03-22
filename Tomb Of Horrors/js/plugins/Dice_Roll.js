@@ -6,9 +6,9 @@
  *
  *@help
  *
- * Just call "DiceRoll n1 n2 n3", where n1 is the number of faces of the dice
- * you want to roll, n2 the times you want to throw it and n3 the variable
- * where the result will be inputed in game.
+ * Just call "DiceRoll n1 n2 n3", where n1 is the number of times you want
+ * to throw the dice, n2 the faces of the dice and n3 the variable where
+ * the result will be inputed in game.
  *
  */
 
@@ -20,8 +20,8 @@ Game_Interpreter.prototype.pluginCommand = function(command, args) {
 
     if(command == "DiceRoll")
     {
-        var number_faces = Number(args[0]);
-        var number_throws = Number(args[1]); 
+        var number_faces = Number(args[1]);
+        var number_throws = Number(args[0]); 
         var x = 0;
 
         for (var i = 0; i < number_throws; i++)
